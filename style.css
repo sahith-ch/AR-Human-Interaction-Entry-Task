@@ -1,0 +1,233 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0c10;
+      --panel: #111318;
+      --border: rgba(255,255,255,0.07);
+      --accent: #7effd4;
+      --text: #e8eaf0;
+      --sub: rgba(232,234,240,0.4);
+
+      --col-unknown:    #4a5568;
+      --col-fist:       #e53e3e;
+      --col-open:       #38b2ac;
+      --col-peace:      #9f7aea;
+      --col-point:      #ed8936;
+      --col-thumbsup:   #48bb78;
+
+      --current: var(--col-unknown);
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      overflow: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 18px 32px 0;
+      position: relative;
+    }
+
+    .gesture-title {
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.5s ease;
+      color: var(--current);
+      text-shadow: 0 0 30px var(--current);
+      text-align: center;
+      min-width: 260px;
+    }
+
+    .pulse-ring {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--current);
+      box-shadow: 0 0 0 0 var(--current);
+      animation: pulse 2s infinite;
+      transition: background 0.5s ease;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 var(--current); }
+      70%  { box-shadow: 0 0 0 8px transparent; }
+      100% { box-shadow: 0 0 0 0 transparent; }
+    }
+
+    .sub-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--sub);
+      letter-spacing: 0.15em;
+      text-align: center;
+      margin-top: 4px;
+      padding-bottom: 12px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 12px 24px 18px;
+      height: calc(100vh - 90px);
+      max-height: 620px;
+    }
+
+    .chameleon-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.5s ease;
+    }
+
+    .chameleon-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 60%, var(--current) 0%, transparent 65%);
+      opacity: 0.08;
+      transition: all 0.5s ease;
+      pointer-events: none;
+    }
+
+    .chameleon-panel-label {
+      position: absolute;
+      bottom: 14px;
+      left: 0; right: 0;
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--sub);
+      text-transform: uppercase;
+    }
+
+    #chameleon-svg {
+      width: 80%;
+      max-width: 340px;
+      height: auto;
+      filter: drop-shadow(0 0 24px var(--current));
+      transition: filter 0.5s ease;
+    }
+
+    .cham-body    { transition: fill 0.5s ease, stroke 0.5s ease; }
+    .cham-belly   { transition: fill 0.5s ease; }
+    .cham-eye-out { transition: fill 0.5s ease; }
+    .cham-stripe  { transition: fill 0.5s ease; }
+    .cham-spots   { transition: fill 0.5s ease; }
+
+    /* ── VIDEO PANEL ── */
+    .video-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,0.04) 3px,
+        rgba(0,0,0,0.04) 4px
+      );
+      pointer-events: none;
+      z-index: 3;
+      border-radius: 20px;
+    }
+
+    .scanline {
+      position: absolute;
+      top: -100%;
+      left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(transparent, rgba(126,255,212,0.04), transparent);
+      animation: scan 4s linear infinite;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    @keyframes scan {
+      0%   { top: -40%; }
+      100% { top: 100%; }
+    }
+
+    #video {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      transform: scaleX(-1);
+      opacity: 0;
+    }
+
+    #canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      transform: scaleX(-1);
+      z-index: 2;
+    }
+
+    .video-label {
+      position: absolute;
+      top: 12px; left: 16px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      z-index: 5;
+      background: rgba(10,12,16,0.7);
+      padding: 3px 8px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+    }
+
+    .corner {
+      position: absolute;
+      width: 14px; height: 14px;
+      z-index: 5;
+    }
+    .corner.tl { top: 8px; left: 8px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+    .corner.tr { top: 8px; right: 8px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+    .corner.bl { bottom: 8px; left: 8px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+    .corner.br { bottom: 8px; right: 8px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+
+    .confidence-bar {
+      position: absolute;
+      bottom: 14px; left: 16px; right: 16px;
+      height: 3px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 2px;
+      z-index: 5;
+      overflow: hidden;
+    }
+    .confidence-fill {
+      height: 100%;
+      background: var(--current);
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.3s ease, background 0.5s ease;
+    }
