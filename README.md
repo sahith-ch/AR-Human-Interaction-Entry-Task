@@ -1,6 +1,5 @@
 # AR Human Interaction (Entry Task)
 
-![Demo](./Ar-interactions-Entry-Task.gif)
 
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) ![No dependencies](https://img.shields.io/badge/dependencies-none-blue?style=flat-square) ![Made with](https://img.shields.io/badge/made%20with-vanilla%20JS-yellow?style=flat-square) ![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-orange?style=flat-square)
 
@@ -44,7 +43,7 @@ using MediaPipe Hands. No backend, no install, no build step.
 ## Demo
 
 > 📸 Add your screenshot or GIF here (`screenshot.gif` in repo root)
-
+![Demo](./Ar-interactions-Entry-Task.gif)
 ---
 
 ## Gestures
