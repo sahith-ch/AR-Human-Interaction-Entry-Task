@@ -30,10 +30,15 @@ Real-time hand gesture recognition in the browser — no backend, no install, no
 
 ## Overview
 
-Gesture Chameleon is a zero-dependency browser demo that uses your webcam and [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker) to classify hand gestures in real time. Each detected gesture triggers a full UI theme change — the chameleon SVG, background glow, title, and accent colour all shift together in under one frame.
+This is an entry task submission built to showcase how hand gestures detected via webcam 
+can drive real-time visual changes in the browser — specifically changing the colour of a 
+chameleon SVG and the gesture label text on screen.
+
+Each recognised gesture maps to a distinct colour, and the entire UI — the SVG fill, glow, 
+and title — updates instantly to reflect it. Built with HTML, CSS, and vanilla JavaScript 
+using MediaPipe Hands. No backend, no install, no build step.
 
 **Stack:** HTML · CSS · Vanilla JavaScript · MediaPipe Hands (WASM via CDN)
-
 ---
 
 ## Demo
