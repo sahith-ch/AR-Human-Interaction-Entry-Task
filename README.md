@@ -1,4 +1,5 @@
-# 🦎 Gesture Chameleon
+# AR Human Interaction (Entry Task)
+
 
 ![Demo](./screenshot.gif)
 
