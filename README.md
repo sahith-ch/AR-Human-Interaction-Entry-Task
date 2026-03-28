@@ -42,7 +42,6 @@ using MediaPipe Hands. No backend, no install, no build step.
 
 ## Demo
 
-> 📸 Add your screenshot or GIF here (`screenshot.gif` in repo root)
 ![Demo](./Ar-interactions-Entry-Task.gif)
 ---
 
