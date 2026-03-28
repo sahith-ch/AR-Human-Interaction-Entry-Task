@@ -3,7 +3,6 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square) ![No dependencies](https://img.shields.io/badge/dependencies-none-blue?style=flat-square) ![Made with](https://img.shields.io/badge/made%20with-vanilla%20JS-yellow?style=flat-square) ![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-orange?style=flat-square)
 
-Real-time hand gesture recognition in the browser — no backend, no install, no build step. Point your hand at the webcam and watch the chameleon change colour.
 
 ---
 
@@ -29,13 +28,15 @@ Real-time hand gesture recognition in the browser — no backend, no install, no
 
 ## Overview
 
-This is an entry task submission built to showcase how hand gestures detected via webcam 
-can drive real-time visual changes in the browser — specifically changing the colour of a 
-chameleon SVG and the gesture label text on screen.
+This repository contains my entry task submission for an AR Human Interaction prototype challenge.
+The goal of the task was to:
 
-Each recognised gesture maps to a distinct colour, and the entire UI — the SVG fill, glow, 
-and title — updates instantly to reflect it. Built with HTML, CSS, and vanilla JavaScript 
-using MediaPipe Hands. No backend, no install, no build step.
+Recognise a single gesture or pose from the webcam
+Trigger a visible action in response (colour change or text update)
+Include a README with clear setup instructions
+
+This prototype fulfils that goal — and goes a step further by supporting 5 distinct gestures, each mapped to a unique colour that updates the chameleon SVG and the gesture label text on screen in real time.
+Built entirely with HTML, CSS, and vanilla JavaScript using MediaPipe Hands 
 
 **Stack:** HTML · CSS · Vanilla JavaScript · MediaPipe Hands (WASM via CDN)
 ---
