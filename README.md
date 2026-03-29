@@ -232,15 +232,24 @@ canvas.height = 480
 
 ---
 
-## Contributing
-
-Pull requests are welcome. For significant changes, open an issue first to discuss what you'd like to change.
-
-Some ideas for contribution:
-- Add more gestures (OK sign, call me, rock on 🤘)
-- Temporal smoothing / debounce for stable classification
-- Two-hand gesture support
-- Offline / PWA mode with locally bundled MediaPipe
+## 🚀 Extension — Proof of Concept
+ 
+> Going beyond the entry task — exploring gesture interaction inside a real AR environment.
+ 
+In addition to this browser demo, I built a Unity-based PoC that takes the same interaction concept — user input triggering behaviour in a virtual entity — and translates it into an AR setting.
+ 
+In this prototype, **tapping on a squid triggers an ink-squirting response**, simulating a natural defensive behaviour. It was built to validate how interaction design ideas from web-based gesture input can carry over into full AR experiences.
+ 
+| | |
+|---|---|
+| **Engine** | Unity |
+| **Interaction** | Tap → Squid ink response |
+| **Purpose** | Validate AR interaction concepts for marine entities |
+ 
+🔗 **PoC Repository** → [github.com/sahith-ch/Squid-Interaction](https://github.com/sahith-ch/Squid-Interaction)
+ 
+🎥 **Demo Video** → [youtu.be/I78_mlqJ9Qc](https://youtu.be/I78_mlqJ9Qc)
+ 
 
 ---
 
