@@ -232,10 +232,8 @@ canvas.height = 480
 
 ---
 
-## 🚀 Extension — Proof of Concept
- 
-> Going beyond the entry task — exploring gesture interaction inside a real AR environment.
- 
+## Extension — Proof of Concept
+  
 In addition to this browser demo, I built a Unity-based PoC that takes the same interaction concept — user input triggering behaviour in a virtual entity — and translates it into an AR setting.
  
 In this prototype, **tapping on a squid triggers an ink-squirting response**, simulating a natural defensive behaviour. It was built to validate how interaction design ideas from web-based gesture input can carry over into full AR experiences.
