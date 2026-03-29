@@ -244,6 +244,3 @@ Some ideas for contribution:
 
 ---
 
-## License
-
-[MIT](./LICENSE)
