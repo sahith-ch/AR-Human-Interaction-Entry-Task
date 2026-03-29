@@ -21,8 +21,7 @@
   - [Theme Engine](#theme-engine)
 - [Configuration](#configuration)
 - [Known Limitations](#known-limitations)
-- [Contributing](#contributing)
-- [License](#license)
+- [Extension — Proof of Concept](#Extension — Proof of Concept)
 
 ---
 
